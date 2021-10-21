@@ -11,8 +11,8 @@ pool:
 
 steps:
 - script: |
-chmod 777 ./sample.sh
-./sample.sh
+    chmod 777 ./sample.sh
+    ./sample.sh
   displayName: 'Run a one-line script'
 
 - script: |

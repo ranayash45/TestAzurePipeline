@@ -10,7 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: ./sample.sh
+- script: |
+chmod 777 ./sample.sh
+./sample.sh
   displayName: 'Run a one-line script'
 
 - script: |

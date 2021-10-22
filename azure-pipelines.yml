@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-- stage: Login |
+- stage: Login
   jobs:
     - job: Login
       steps:

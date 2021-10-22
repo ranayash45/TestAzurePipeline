@@ -18,3 +18,12 @@ stages:
         echo My Step1
     - script: |
         echo My Step2 $(STAGE)
+- stage: Calibrate
+  jobs:
+  - job: Run
+    steps:
+    - script: |
+        echo So Many Stages
+        echo Testing Matters
+        
+    

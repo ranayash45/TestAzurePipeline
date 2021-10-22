@@ -9,13 +9,12 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: |
-    chmod 777 ./sample.sh
-    ./sample.sh
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml $(STAGE)
-  displayName: 'Run a multi-line script'
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    steps:
+    - script: |
+        echo My Step1
+    - script: |
+        echo My Step2 $(STAGE)

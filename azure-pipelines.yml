@@ -15,11 +15,9 @@ stages:
     - job: Login
       steps:
       - script: |
-          az login -u ${env:AZUSER} -p ${env:AZPASS}
+          az login -u $(AZUSER) -p $(AZPASS)
       - script: |
           echo "Login Successfull"
-    - job: KeyVaultAccess
-      steps:
       - script: |
           echo "getting data from key vault"
 - stage: Build

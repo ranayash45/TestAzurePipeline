@@ -15,7 +15,7 @@ stages:
     - job: Login
       steps:
       - script: |
-          az login -u $(AZURE_USERNAME) -p $(AZURE_PASSWORD)
+          az login -u ${env:AZURE_USERNAME} -p ${env:AZURE_PASSWORD}
       - script: |
           echo "Login Successfull"
     - job: KeyVaultAccess
